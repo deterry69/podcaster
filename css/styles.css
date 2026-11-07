@@ -1,0 +1,357 @@
+/* =========================================
+   VARIABLES Y RESET
+   ========================================= */
+:root {
+    --bg-color: #ffffff; /* Color de fondo por defecto */
+    --text-primary: #000000;
+    --border-color: #000000;
+    --accent-red: #e62314; /* Rojo para botones y hover */
+    --accent-yellow: #fff000; /* Amarillo logo y badges */
+    --accent-orange: #ff5500; /* Naranja badge principal */
+    
+    /* Variables para el Neo-Brutalismo */
+    --border-thickness: 4px;
+    --shadow-distance: 6px;
+    --shadow-distance-hover: 2px;
+    
+    --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    
+    /* PON AQUÍ LA URL DE TU IMAGEN GENERADA (SÚBELA A CLOUDINARY) */
+    background-image: url('https://res.cloudinary.com/dbadhyp7x/image/upload/v1794066202/Gemini_Generated_Image_ve3grvve3grvve3g_idrewf.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ocultar texto visualmente (Accesibilidad) */
+.visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
+
+/* =========================================
+   CABECERA
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+    border-bottom: var(--border-thickness) solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header__title {
+    background-color: var(--accent-yellow);
+    padding: 0.5rem 1rem;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.1s ease;
+}
+
+.header__title:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--border-color);
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.header__nav-link {
+    font-weight: 800;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.header__nav-link--active {
+    background-color: var(--accent-red);
+    color: #ffffff;
+    padding: 0.4rem 1rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+}
+
+.header__nav-link:hover {
+    color: var(--accent-red);
+}
+.header__nav-link--active:hover {
+    color: #ffffff;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--border-color);
+}
+
+.header__loader {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--accent-orange);
+    /* Animación de 1 segundo (requisito del DAW) */
+    animation: spin-and-fade 1s forwards;
+}
+
+@keyframes spin-and-fade {
+    0% { transform: rotate(0deg); opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: rotate(360deg); opacity: 0; }
+}
+
+/* =========================================
+   MAIN Y SECCIÓN SUPERIOR (HERO)
+   ========================================= */
+.main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente para que se lea bien */
+    padding: 2rem;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: var(--shadow-distance) var(--shadow-distance) 0px var(--border-color);
+}
+
+.hero-section__title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-section__subtitle {
+    background-color: var(--accent-yellow);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-weight: 800;
+    border: 2px solid var(--border-color);
+    margin-top: 0.5rem;
+}
+
+.badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    color: #ffffff;
+}
+
+.badge--orange { background-color: var(--accent-orange); }
+.badge--yellow { background-color: var(--accent-yellow); color: var(--text-primary); border-radius: 0; font-size: 0.8rem; box-shadow: 2px 2px 0px var(--border-color);}
+
+/* Buscador */
+.controls__search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.controls__search {
+    padding: 1rem 3rem 1rem 3rem;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 1rem;
+    width: 350px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.controls__search:focus-visible {
+    outline: none;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--border-color);
+}
+
+.controls__search-icon {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.2rem;
+}
+
+.controls__search-shortcut {
+    position: absolute;
+    right: 1rem;
+    background-color: var(--border-color);
+    color: #ffffff;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   GRID DE PODCASTS (Responsive)
+   ========================================= */
+.podcast-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem 2rem; /* Mucho espacio vertical para que quepa la foto sobresaliendo */
+    margin-bottom: 4rem;
+}
+
+/* TARJETA PODCAST */
+.podcast-card {
+    position: relative;
+    background-color: #ffffff;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: var(--shadow-distance) var(--shadow-distance) 0px var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.podcast-card:hover {
+    transform: translate(4px, 4px);
+    box-shadow: var(--shadow-distance-hover) var(--shadow-distance-hover) 0px var(--border-color);
+}
+
+.podcast-card__link {
+    display: block;
+    height: 100%;
+}
+
+.podcast-card__image-wrapper {
+    position: absolute;
+    top: -40px; /* Aquí está el truco para que sobresalga */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: var(--border-thickness) solid var(--border-color);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.podcast-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.podcast-card__content {
+    padding: 3.5rem 1.5rem 1.5rem; /* Padding superior extra para no chocar con la foto */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.podcast-card__title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.podcast-card__author {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+.podcast-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.podcast-card__category {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.color-dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+.color-dot--red { background-color: var(--accent-red); }
+
+/* =========================================
+   FOOTER BANNER
+   ========================================= */
+.footer-banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.footer-banner__left, .footer-banner__right {
+    background-color: #ffffff;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 0.5rem 1rem;
+    font-weight: 900;
+}
+
+.footer-banner__left {
+    background-color: #000;
+    color: var(--accent-yellow);
+}
+
+/* =========================================
+   MEDIA QUERIES (Requisito DAW)
+   ========================================= */
+@media (max-width: 1024px) {
+    .podcast-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-section { flex-direction: column; text-align: center; gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+    .podcast-grid { grid-template-columns: 1fr; }
+    .header { flex-direction: column; gap: 1rem; }
+}
