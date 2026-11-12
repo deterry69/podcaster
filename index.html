@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcaster</title>
-    <!-- He añadido un par de iconos de FontAwesome para el buscador y el botón de discover -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Cargamos una fuente gruesa y potente para el rollo Neo-Brutalista -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800;900&display=swap" rel="stylesheet">
 </head>
 <body class="page">
     
-    <!-- CABECERA COMÚN -->
     <header class="header">
         <div class="header__left">
             <h1 class="header__title"> 
@@ -27,14 +24,12 @@
                 <a href="#" class="header__nav-link header__nav-link--active">Discover</a>
                 <a href="#" class="header__nav-link">Your library</a>
             </nav>
-            <!-- Indicador de carga animado por CSS -->
             <div class="header__loader" aria-hidden="true"></div>
         </div>
     </header>
 
     <main class="main">
         
-        <!-- SECCIÓN SUPERIOR: TÍTULO Y BUSCADOR -->
         <section class="hero-section">
             <div class="hero-section__text">
                 <h2 class="hero-section__title">Explore podcasts <span class="badge badge--orange">12</span></h2>
@@ -42,7 +37,6 @@
             </div>
             
             <div class="controls">
-                <!-- Label oculto visualmente pero accesible para lectores de pantalla -->
                 <label for="search" class="visually-hidden">Filter podcasts</label>
                 <div class="controls__search-wrapper">
                     <i class="fa-solid fa-magnifying-glass controls__search-icon"></i>
@@ -52,15 +46,11 @@
             </div>
         </section>
 
-        <!-- CUADRÍCULA DE PODCASTS -->
         <section class="podcast-grid">
             
-            <!-- TARJETA DE PODCAST DE EJEMPLO 1 (Copia y pega este bloque para crear los 12) -->
             <article class="podcast-card">
-                <!-- Enlace general que engloba la tarjeta, tal como pide el ejercicio -->
                 <a href="podcast.html" class="podcast-card__link">
                     <div class="podcast-card__image-wrapper">
-                        <!-- Añade aquí la URL de tu imagen de Cloudinary -->
                         <img src="https://res.cloudinary.com/dbadhyp7x/image/upload/v1794066231/channels4_profile_rzj4zu.jpg" alt="Podcast profile" class="podcast-card__image">
                     </div>
                     <div class="podcast-card__content">
@@ -74,10 +64,8 @@
                 </a>
             </article>
             <article class="podcast-card">
-                <!-- Enlace general que engloba la tarjeta, tal como pide el ejercicio -->
                 <a href="podcast.html" class="podcast-card__link">
                     <div class="podcast-card__image-wrapper">
-                        <!-- Añade aquí la URL de tu imagen de Cloudinary -->
                         <img src="https://res.cloudinary.com/dbadhyp7x/image/upload/v1794066954/cop_mkapxo.jpg" alt="Podcast profile" class="podcast-card__image">
                     </div>
                     <div class="podcast-card__content">
@@ -90,8 +78,66 @@
                     </div>
                 </a>
             </article>
-            <!-- FIN TARJETA DE PODCAST DE EJEMPLO 1 -->
-
+            <article class="podcast-card">
+                <a href="podcast.html" class="podcast-card__link">
+                    <div class="podcast-card__image-wrapper">
+                        <img src="https://res.cloudinary.com/dbadhyp7x/image/upload/v1794502656/JiTyMt65_400x400_esoe3h.jpg" alt="Podcast profile" class="podcast-card__image">
+                    </div>
+                    <div class="podcast-card__content">
+                        <h3 class="podcast-card__title">The Wild Project</h3>
+                        <p class="podcast-card__author">Jordi Wild</p>
+                        <div class="podcast-card__footer">
+                            <span class="podcast-card__category"><span class="color-dot color-dot--red"></span> Categoría</span>
+                            <span class="badge badge--yellow">430 eps</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="podcast-card">
+                <a href="podcast.html" class="podcast-card__link">
+                    <div class="podcast-card__image-wrapper">
+                        <img src="https://res.cloudinary.com/dbadhyp7x/image/upload/v1794502656/channels4_profile_1_lzgexm.jpg" alt="Podcast profile" class="podcast-card__image">
+                    </div>
+                    <div class="podcast-card__content">
+                        <h3 class="podcast-card__title">Yo, Interneto</h3>
+                        <p class="podcast-card__author">Author: Orslok, Sr.Cheeto & Darío Eme</p>
+                        <div class="podcast-card__footer">
+                            <span class="podcast-card__category"><span class="color-dot color-dot--red"></span> Categoría</span>
+                            <span class="badge badge--yellow">62 eps</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="podcast-card">
+                <a href="podcast.html" class="podcast-card__link">
+                    <div class="podcast-card__image-wrapper">
+                        <img src="https://res.cloudinary.com/dbadhyp7x/image/upload/v1794066954/cop_mkapxo.jpg" alt="Podcast profile" class="podcast-card__image">
+                    </div>
+                    <div class="podcast-card__content">
+                        <h3 class="podcast-card__title">Grimey TV</h3>
+                        <p class="podcast-card__author">Author: Yibril & Joël</p>
+                        <div class="podcast-card__footer">
+                            <span class="podcast-card__category"><span class="color-dot color-dot--red"></span> Categoría</span>
+                            <span class="badge badge--yellow">189 eps</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="podcast-card">
+                <a href="podcast.html" class="podcast-card__link">
+                    <div class="podcast-card__image-wrapper">
+                        <img src="https://res.cloudinary.com/dbadhyp7x/image/upload/v1794066954/cop_mkapxo.jpg" alt="Podcast profile" class="podcast-card__image">
+                    </div>
+                    <div class="podcast-card__content">
+                        <h3 class="podcast-card__title">One Piece: El Podcast</h3>
+                        <p class="podcast-card__author">Author: FrigoAdri, Sekiam & Barbe</p>
+                        <div class="podcast-card__footer">
+                            <span class="podcast-card__category"><span class="color-dot color-dot--red"></span> Categoría</span>
+                            <span class="badge badge--yellow">88 eps</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
         </section>
 
         <!-- FOOTER / BANNER INFERIOR -->
