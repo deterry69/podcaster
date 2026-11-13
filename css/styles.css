@@ -214,16 +214,6 @@ a {
     font-size: 1.2rem;
 }
 
-.controls__search-shortcut {
-    position: absolute;
-    right: 1rem;
-    background-color: var(--border-color);
-    color: #ffffff;
-    padding: 0.2rem 0.4rem;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
 .podcast-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -308,15 +298,24 @@ a {
     gap: 0.4rem;
 }
 
+/* Colores para cada puntito de categoría */
 .color-dot {
     width: 10px;
     height: 10px;
     display: inline-block;
+    border: 1px solid var(--border-color); /* Borde finito para que resalten sobre el blanco */
 }
 
-.color-dot--red {
-    background-color: var(--accent-red);
-}
+.color-dot--red { background-color: var(--accent-red); }
+.color-dot--yellow { background-color: var(--accent-yellow); }
+.color-dot--blue { background-color: #0044ff; }
+.color-dot--green { background-color: #00cc44; }
+.color-dot--purple { background-color: #9900ff; }
+.color-dot--cyan { background-color: #00ddff; }
+.color-dot--pink { background-color: #ff00aa; }
+.color-dot--orange { background-color: var(--accent-orange); }
+.color-dot--lime { background-color: #aaff00; }
+.color-dot--teal { background-color: #008080; }
 
 .footer-banner {
     display: flex;
