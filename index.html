@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcaster</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dbadhyp7x/image/upload/v1794904546/Gemini_Generated_Image_yzcvyxyzcvyxyzcv_cansmd.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800;900&display=swap" rel="stylesheet">
@@ -41,7 +42,6 @@
                 <div class="controls__search-wrapper">
                     <i class="fa-solid fa-magnifying-glass controls__search-icon"></i>
                     <input type="search" id="search" class="controls__search" placeholder="Filter podcasts...">
-                    <!-- El ⌘ K era una mierda que no funcionaba, así que lo hemos volado -->
                 </div>
             </div>
         </section>
@@ -241,15 +241,29 @@
             </article>
         </section>
 
-        <footer class="footer-banner">
-            <div class="footer-banner__left">
-                <p>All 12 podcasts. Endless possibilities.</p>
-            </div>
-            <div class="footer-banner__right">
-                <p><i class="fa-solid fa-headphones"></i> Stay curious. Keep listening.</p>
-            </div>
-        </footer>
     </main>
 
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <span class="footer__logo"><i class="fa-solid fa-chart-simple"></i> Podcaster</span>
+                <p class="footer__copy">&copy; 2026 Podcaster. All rights reserved. Designed &amp; built in Sevilla (DAW).</p>
+            </div>
+
+            <nav class="footer__nav" aria-label="Footer navigation">
+                <a href="index.html" class="footer__link">Discover</a>
+                <a href="#" class="footer__link">Your Library</a>
+                <a href="#" class="footer__link">About</a>
+                <a href="#" class="footer__link">Privacy</a>
+            </nav>
+
+            <div class="footer__social">
+                <a href="https://github.com/deterry69" target="_blank" rel="noopener noreferrer" class="footer__github-link" aria-label="GitHub profile of deterry69">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo" class="footer__github-icon">
+                    <span>@deterry69</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
